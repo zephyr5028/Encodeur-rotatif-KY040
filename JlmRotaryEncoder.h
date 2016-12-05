@@ -11,11 +11,7 @@
 #ifndef JlmRotaryEncoder_h
 #define JlmRotaryEncoder_h
 
-
 #include <Arduino.h>
-
-//#include <avr/interrupt.h>
-//#include "WInterrupts.c"
 
 class JlmRotaryEncoder
 {
@@ -35,10 +31,9 @@ class JlmRotaryEncoder
     byte m_encoderPinA; // right (DT) pin A
     byte m_encoderPinB; // left (CLK) pin B
     byte m_switchButton; // switch (SW) pin sw
-     boolean m_unSwitch; // un seul appui à la fois sur sw
+    boolean m_unSwitch; // un seul appui à la fois sur sw
 
-    volatile unsigned int m_encoderPos;  // un compteur
-    //  unsigned int lastReportedPos = 1;   // gestion du changement
+    volatile unsigned int m_encoderPos;  // un compteur de position
     boolean m_rotating;    // gestion de l'anti-rebonds
 
     // variable pour les routines d'interruption
