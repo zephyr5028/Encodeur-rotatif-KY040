@@ -1,7 +1,7 @@
 /*******************************
   gestion d'un codeur rotatif KY040
   avec
-  la classe JlmRotaryEncodeur
+  la classe JlmRotaryEncoder
 
   décembre 2016
 *******************************/
@@ -22,7 +22,7 @@ int lastReportedPos = 1;   // gestion du changement
 
 void setup() {
   Serial.begin (9600);
-  rotary.init(); // initialisation
+  rotary.init(); // initialisation des branchements
   attachInterrupt(digitalPinToInterrupt(encoderPinA), doEncoderA, CHANGE);// activation de l'interruption 0 (pin 2)
   attachInterrupt(digitalPinToInterrupt(encoderPinB), doEncoderB, CHANGE); // activation de l'interruption 1 (pin 3)
 }
