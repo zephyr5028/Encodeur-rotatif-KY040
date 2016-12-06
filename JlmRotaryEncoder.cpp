@@ -19,7 +19,7 @@ void JlmRotaryEncoder::init()
   if (m_switchButton != 0)   pinMode(m_switchButton, INPUT_PULLUP); // utilisation du pullup
 }
 
-// Interruption sur changement d'état de A
+// changement d'état de A
 int JlmRotaryEncoder::encoderA()
 {
   // debounce
@@ -40,7 +40,7 @@ int JlmRotaryEncoder::encoderA()
   return m_encoderPos;
 }
 
-// Interruption sur changement d'etat de B
+// changement d'etat de B
 int JlmRotaryEncoder::encoderB()
 {
   if ( m_rotating ) delay (3);
@@ -62,6 +62,7 @@ int JlmRotaryEncoder::encoderB()
 // clear le compteur avec le switch
 void JlmRotaryEncoder::switchClear()
 {
+  //debounce et seul appui à la fois
   if (digitalRead(m_switchButton) == LOW )  delay(20); else m_unSwitch = true;
   if (digitalRead(m_switchButton) == LOW  and m_unSwitch) {
     m_encoderPos = 0;
