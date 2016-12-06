@@ -22,7 +22,7 @@ int lastReportedPos = 1;   // gestion du changement
 
 void setup() {
   Serial.begin (9600);
-  rotary.init(); // initialisation des branchements
+  //rotary.init(); // initialisation des branchements
   attachInterrupt(digitalPinToInterrupt(encoderPinA), doEncoderA, CHANGE);// activation de l'interruption 0 (pin 2)
   attachInterrupt(digitalPinToInterrupt(encoderPinB), doEncoderB, CHANGE); // activation de l'interruption 1 (pin 3)
 }

@@ -21,12 +21,14 @@ class JlmRotaryEncoder
 
     ~JlmRotaryEncoder(); // destructeur
 
-    void init(); // initialisation
+    // void init(); // initialisation des branchements
     int encoderA(); //  changement d'état de A
     int encoderB(); // changement d'etat de B
     void switchClear(); // clear compteur avec le switch
 
   protected:
+
+    void init(); // initialisation des branchements
 
     byte m_encoderPinA; // right (DT) pin A
     byte m_encoderPinB; // left (CLK) pin B
