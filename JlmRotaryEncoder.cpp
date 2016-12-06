@@ -63,7 +63,7 @@ int JlmRotaryEncoder::encoderB()
 // clear le compteur avec le switch
 void JlmRotaryEncoder::switchClear()
 {
-  //debounce et seul appui à la fois
+  //debounce et un seul appui à la fois
   if (digitalRead(m_switchButton) == LOW )  delay(20); else m_unSwitch = true;
   if (digitalRead(m_switchButton) == LOW  and m_unSwitch) {
     m_encoderPos = 0;
