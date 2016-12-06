@@ -17,7 +17,7 @@ class JlmRotaryEncoder
 {
   public:
 
-    JlmRotaryEncoder(byte dt, byte clk, byte sw) ; // constructeur avec broches pour dt , clk et sw
+    JlmRotaryEncoder(byte dt, byte clk, byte sw = 0) ; // constructeur avec broches pour dt , clk et sw
 
     ~JlmRotaryEncoder(); // destructeur
 
