@@ -4,7 +4,6 @@
 JlmRotaryEncoder::JlmRotaryEncoder(byte dt, byte clk, byte sw) : m_encoderPinA(dt), m_encoderPinB(clk), m_switchButton(sw),
   m_A_set(false) , m_B_set(false), m_A_change(false), m_B_change(false), m_rotating(false), m_encoderPos(0),  m_unSwitch(true)
 {
-  JlmRotaryEncoder::init(); //initialisation des branchements
 }
 
 // destrcuteur
